@@ -1,0 +1,26 @@
+{
+  "name": "recipe-book-ms",
+  "version": "1.0.3",
+  "description": "livre de recette - api - node Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreDelesse/recipe-book-ms.git"
+  },
+  "author": "alexandre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandreDelesse/recipe-book-ms/issues"
+  },
+  "homepage": "https://github.com/AlexandreDelesse/recipe-book-ms#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0"
+  }
+}

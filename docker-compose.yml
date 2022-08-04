@@ -1,0 +1,29 @@
+# Use root/example as user/password credentials
+version: "3.1"
+
+services:
+  db:
+    image: mysql
+    # platform: linux/arm64/v8
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: recipe_organizer_pwd
+      MYSQL_DATABASE: recipe_organizer
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8082:8080
+
+  service:
+    build: ./ms/
+    restart: always
+    ports:
+      - 5002:5002
+    environment: 
+      DB_HOST: db
+      
